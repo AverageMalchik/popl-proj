@@ -39,3 +39,58 @@ impl GrepOptionsBuilder {
     Ok(options)
   }
 }
+
+#[test]
+fn test_can_build_options_with_3_args() {
+  let options = GrepOptionsBuilder::parse(vec![
+    String::from("program"),
+    String::from("search-string"),
+    String::from("path-to-file"),
+    String::from("case-sensitive"),
+    String::from("count")
+  ]);
+  match options {
+    Ok(options) => {
+      assert_eq!(options.search, "search-string");
+      assert_eq!(options.file_path, "path-to-file");
+      assert_eq!(options.case_sensitive, true);
+      assert_eq!(options.count,true);
+    }
+    Err(error) => panic!("{}", error),
+  }
+}
+
+#[test]
+fn test_can_build_options_with_2_args() {
+  let options = GrepOptionsBuilder::parse(vec![
+    String::from("program"),
+    String::from("search-string"),
+    String::from("path-to-file"),
+  ]);
+  match options {
+    Ok(options) => {
+      assert_eq!(options.search, "search-string");
+      assert_eq!(options.file_path, "path-to-file");
+      assert_eq!(options.case_sensitive, false);
+    }
+    Err(error) => panic!("{}", error),
+  }
+}
+
+#[test]
+#[should_panic]
+fn test_can_not_build_options_with_1_args() {
+  let options = GrepOptionsBuilder::parse(vec![String::from("search-string")]);
+  if let Err(error) = options {
+    panic!("{}", error)
+  }
+}
+
+#[test]
+#[should_panic]
+fn test_can_not_build_options_with_0_args() {
+  let options = GrepOptionsBuilder::parse(vec![]);
+  if let Err(error) = options {
+    panic!("{}", error)
+  }
+}
