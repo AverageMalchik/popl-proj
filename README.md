@@ -28,7 +28,7 @@ Repository for our CS F301 POPL project
 
     C.How is your solution different?
 
-2. Software Architecture
+2. [Software Architecture](#2software-architecture)
 
     A.What is the Software Architecture of your solution?
 
@@ -38,7 +38,7 @@ Repository for our CS F301 POPL project
 
     C.Where is the testing component placed(local or remote)? Is there a database involved?
 
-3. Popl aspects
+3. [Popl aspects](#3popl-architecture)
 
     A.What are the Popl Aspects involved in the implementation?
 
@@ -51,9 +51,8 @@ Repository for our CS F301 POPL project
 
     D. Pattern freeing and cleanup
 
-4. How to run the rust code?
-1. Results
-2. Potential for future work
+4. [How to run the rust code?](#4how-to-run-the-rust-code)
+5. [Potential for future work](#5potential-for-future-work)
 
 
 # 1.Problem Statement
@@ -205,6 +204,6 @@ Memory Allocation and Deallocation:Functions like grep_source_init_buf, grep_sou
 [https://www.youtube.com/watch?v=T_KrYLW4jw8](https://www.youtube.com/watch?v=T_KrYLW4jw8)
 
 
-# 6.Potential for future work
+# 5.Potential for future work
 
 A potential future work includes to implement regular expression pattern matching.A C package called PCRE2 (Perl Compatible Regular Expressions 2) offers a number of methods that perform regular expression pattern matching with Perl 5's syntax and semantics. For managing regular expressions in a variety of computer languages, PCRE2 is an effective tool.
