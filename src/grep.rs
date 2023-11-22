@@ -5,16 +5,18 @@ use crate::grep_command_builder::GrepOptions;
 use r3bl_rs_utils::{style_primary, style_prompt};
 
 pub fn grep(options: GrepOptions) -> Result<(), Box<dyn Error>> {
-  println!(
-    "{}: search for '{}' in '{}' w/ {}",
+  print!(
+    "{}: search for '{}' in '{}' w/ flags ",
     style_prompt("DEBUG"),
     options.search,
-    options.file_path,
-    match options.case_sensitive {
-      true => "case sensitive",
-      false => "case insensitive",
-    }
+    options.file_path
   );
+
+  for flag in options.fl.iter() {
+    print!();
+  }
+
+  println!();
 
   let content = fs::read_to_string(options.file_path)?;
   let filtered_content = content
