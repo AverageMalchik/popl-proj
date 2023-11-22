@@ -38,7 +38,7 @@ Repository for our CS F301 POPL project
 
     C.Where is the testing component placed(local or remote)? Is there a database involved?
 
-3. [Popl aspects](#3popl-architecture)
+3. [Popl aspects](#3popl-aspects)
 
     A.What are the Popl Aspects involved in the implementation?
 
