@@ -91,7 +91,7 @@ Repository for our CS F301 POPL project
 1. Look for all files in the current directory and in all of its subdirectories in Linux .
 2. Search and display the total number of times that a string appears in a file.
 
-2.Software Architecture
+# 2.Software Architecture
 
 
 ## A. What is the software architecture of your soln?
