@@ -1,8 +1,8 @@
 use std::{error::Error, fs};
 
-use r3bl_rs_utils::utils::{style_primary, style_prompt};
-
 use crate::grep_command_builder::GrepOptions;
+
+use r3bl_rs_utils::{style_primary, style_prompt};
 
 pub fn grep(options: GrepOptions) -> Result<(), Box<dyn Error>> {
   println!(

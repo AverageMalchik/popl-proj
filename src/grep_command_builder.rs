@@ -13,7 +13,7 @@ impl GrepOptionsBuilder {
   pub fn parse(args: Vec<String>) -> Result<GrepOptions, String> {
     if args.len() < REQUIRED_ARGS_COUNT {
       return Err(format!(
-        "Expected at least {} arguments, got {}.",
+        "Expected at least {} arguments, got {}.\nUsage: ",
         REQUIRED_ARGS_COUNT,
         args.len()
       ));
