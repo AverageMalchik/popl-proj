@@ -11,4 +11,4 @@ atty = "*"
 
 [[bin]]
 name = "rust_grep"
-path = "src/main.rs"
+path = "code-orig/main.rs"
